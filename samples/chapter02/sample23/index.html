@@ -18,7 +18,15 @@
             </p>
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                
+                const email = document.querySelector('input[name="name"]');
+                email.addEventListener('blur', () => {
+                    if(email.value === ''){
+                       email.stylebackground = '#fcc';
+                       email.nextElementSibling.innerHTML = '※ メールアドレスを入力してください。';
+                    }
+                  
+                });
+
             </script>
         </div>
     </div>
